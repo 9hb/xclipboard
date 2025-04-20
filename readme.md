@@ -1,4 +1,4 @@
-# XC - Nastroj pro prikazovou radku
+# XC - Command Line Tool
 
 Jednoduchy nastroj pro ukladani a spousteni prikazu z clipboard.
 
