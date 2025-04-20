@@ -38,7 +38,7 @@ Executes the previously saved command and returns the same exit code.
 
 Watch a demo of the tool:
 
-![XC demo](.assets/showcase.mp4)
+![XC demo](.assets/showcase.gif)
 
 ## How it works
 

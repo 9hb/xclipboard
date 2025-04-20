@@ -38,7 +38,7 @@ Spusti drive ulozeny prikaz a vrati stejny navratovy kod.
 
 Podivejte se na demo nastroje:
 
-![XC demo](.assets/showcase.mp4)
+![XC demo](.assets/showcase.gif)
 
 ## Jak to funguje
 
