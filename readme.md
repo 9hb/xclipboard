@@ -1,69 +1,36 @@
-# XC - Command Line Tool
-
-Jednoduchy nastroj pro ukladani a spousteni prikazu z clipboard.
-
+# xc
+ 
+Jednoduchý nástroj pro sdílení příkazů mezi terminály. Uloží příkaz do souboru a spustí ho na vyžádání.
+ 
+![XC demo](.assets/showcase.gif)
+ 
 ## Instalace
-
+ 
 ```bash
-# Kompilace z repozitare
-git clone https://github.com/[vas-uzivatel]/xc-clipboard.git
-cd xc-clipboard
+git clone https://github.com/9hb/xclipboard.git
+cd xclipboard
 cargo build --release
-
-# Kopirovani binarniho souboru do adresare, ktery je v PATH
-cp target/release/xc ~/.local/bin/  # pro Linux/MacOS
-# nebo
-copy target\release\xc.exe C:\Windows\System32\  # pro Windows
+cp target/release/xc ~/.local/bin/
 ```
-
-## Pouziti
-
-### Kopirovani prikazu do schranky
-
+ 
+Na Windows zkopíruj `target\release\xc.exe` někam do PATH.
+ 
+## Použití
+ 
 ```bash
+# ulož příkaz
 xc ls -la ~/.config
-```
-
-Prikaz bude ulozen do souboru `.xc_clipboard` v domovskem adresari.
-
-### Spousteni prikazu ze schranky
-
-```bash
+ 
+# spusť uložený příkaz
 xc -p
 ```
-
-Spusti drive ulozeny prikaz a vrati stejny navratovy kod.
-
-## Demo
-
-Podivejte se na demo nastroje:
-
-![XC demo](.assets/showcase.gif)
-
-## Jak to funguje
-
-1. **Kopirovani prikazu:**
-
-   - Program vezme vstupni argumenty a ulozi je do souboru v domovskem adresari
-   - Zobrazi potvrzeni o kopirovani
-
-2. **Vlozeni a spusteni prikazu:**
-   - Program precte ulozeny prikaz ze souboru
-   - Rozdeli prikaz na spustitelny soubor a argumenty
-   - Spusti prikaz a predava vsechny standardni vstupy/vystupy
-   - Ukonci s navratovym kodem spusteneho prikazu
-
-## Pouziti v praxi
-
-- Ulozeni slozitych prikazu, ktere se tezko pisi
-- Rychle opakovani poslednich prikazu bez historie prikazove radky
-- Sdileni prikazu mezi ruznymi terminaly
-
-## Pozadavky
-
-- Rust 1.85 nebo vyssi
-- Pristup k domovskemu adresari pro uchovavani souboru schranky
-
+ 
+Příkaz se ukládá do `~/.xc_clipboard`. Při spuštění přes `-p` vrátí `xc` stejný exit code jako původní příkaz.
+ 
+## Požadavky
+ 
+- Rust 1.85+
 ## Licence
-
+ 
 MIT
+ 
